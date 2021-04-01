@@ -16,11 +16,14 @@ Further improvement:
 #define SERVO_FREQ 50
 #define INIT_DELAY 300
 
-Valve1::Valve1(int channel)
+Valve1::Valve1(int channel, int openPosition, int closedPosition)
 { 
   _driver = Adafruit_PWMServoDriver();
   _channel = channel;
   _isOpen = false;
+  _openPosition = openPosition;
+  _closedPosition = closedPosition;
+
 }
 
 void Valve1::begin(){
@@ -45,4 +48,12 @@ void Valve1::close(){
 
 bool Valve1::isOpen(){
   return _isOpen;
+}
+
+int Valve1::getOpenPosition(){
+  return _openPosition;
+}
+
+int Valve1::getClosedPosition(){
+  return _closedPosition;
 }
