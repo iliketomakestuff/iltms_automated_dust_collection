@@ -18,7 +18,8 @@ struct MapEntry {
 };
 
 MapEntry sensorMap[NUM_SENSORS] = {
-    (MapEntry){A0, 3, 380, 448}
+    //          ampSensorChannel, valveServoChannel,  valveOpenPosition,  valveClosedPosition
+    (MapEntry){ A0,               3,                  380,                448                 } 
   };
 
 
