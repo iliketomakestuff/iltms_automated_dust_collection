@@ -17,7 +17,7 @@ struct MapEntry {
   int closedPosition;
 };
 
-
+// Be sure to match NUM_SENSORS to the actual count below!
 MapEntry sensorMap[NUM_SENSORS] = {
     //          ampSensorChannel, valveServoChannel,  valveOpenPosition,  valveClosedPosition
     (MapEntry){ A0,               3,                  380,                448                 }
