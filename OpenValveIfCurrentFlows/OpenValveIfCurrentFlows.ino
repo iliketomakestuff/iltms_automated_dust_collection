@@ -17,9 +17,18 @@ struct MapEntry {
   int closedPosition;
 };
 
+
 MapEntry sensorMap[NUM_SENSORS] = {
     //          ampSensorChannel, valveServoChannel,  valveOpenPosition,  valveClosedPosition
-    (MapEntry){ A0,               3,                  380,                448                 } 
+    (MapEntry){ A0,               3,                  380,                448                 }
+    //(MapEntry){ A1,               3,                  380,                448                 },
+    //(MapEntry){ A2,               3,                  380,                448                 }, 
+    //(MapEntry){ A3,               3,                  380,                448                 },   
+    // Don't use A4 and A5 because they are also connected to SCL and SDA on the servo shield.
+    // Don't use A6 and A7 because they are physically not connected
+    //(MapEntry){ A8,               3,                  380,                448                 },  
+    // ...
+    //(MapEntry){ A15,              3,                  380,                448                 },
   };
 
 
